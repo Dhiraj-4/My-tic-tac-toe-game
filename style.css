@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+body #turn {
+    color: white;
+    font-size: 48px;
+    font-weight: 900;
+}
+body .wapper {
+    min-height: 240px;
+    min-width: 240px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+body .wapper .cells {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 48px;
+    font-weight: 900;
+
+}
+body .wapper .cells:nth-child(1) {
+    border-bottom: 10px solid white;
+    border-right: 10px solid white;
+}
+body .wapper .cells:nth-child(1) {
+    border-bottom: 10px solid white;
+    border-right: 10px solid white;
+}
+body .wapper .cells:nth-child(2) {
+    border-bottom: 10px solid white;
+    border-right: 10px solid white;
+}
+body .wapper .cells:nth-child(3) {
+    border-bottom: 10px solid white;
+}
+body .wapper .cells:nth-child(4) {
+    border-bottom: 10px solid white;
+    border-right: 10px solid white;
+}
+body .wapper .cells:nth-child(5) {
+    border-bottom: 10px solid white;
+    border-right: 10px solid white;
+}
+body .wapper .cells:nth-child(6) {
+    border-bottom: 10px solid white;
+}
+body .wapper .cells:nth-child(7) {
+    border-right: 10px solid white;
+}
+body .wapper .cells:nth-child(8) {
+    border-right: 10px solid white;
+}
+
+#startGame {
+    font-size: 28px;
+    font-weight: 700;
+    padding: 10px 20px 10px 20px;
+    margin-top: 50px;
+}

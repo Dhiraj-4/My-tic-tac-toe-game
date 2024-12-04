@@ -8,13 +8,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startGame = document.getElementById('startGame');
 
+    let gameOn = false;
+
     startGame.addEventListener('click', () => {
-        startGame.style.display = 'none';
+        if(!gameOn) {
+            startGame.textContent = 'Restart';
         OXeventListener();
         gameLoop();
+        gameOn = true;
+        }
+        else {
+            startGame.textContent = 'Start Game';
+            clearInterval(intervels);
+            removeOXeventListener();
+            emptyCells();
+            gameOn = false;
+        }
     });
     function updateTurnBoard() {
         turnBoard.textContent = "Turn: " + xORo;
+    }
+
+    function emptyCells() {
+        for(let i = 0; i < cells.length; i++) {
+            cells[i].textContent = '';
+        }
     }
 
     function gameLoop() {

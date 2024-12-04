@@ -29,9 +29,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert("X", "Won the match");
                 }
             }
+            if(Draw()) {
+                clearInterval(intervels);
+                removeOXeventListener();
+                alert('The Game was a Draw');
+            }
         },50);
     }
 
+    function Draw() {
+
+        for(let i = 0; i < cells.length; i++) {
+            if(cells[i].isChanged == false) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    
     function removeOXeventListener() {
         for(let i = 0; i < cells.length; i++) {
             cells[i].removeEventListener('click',handleClick);
@@ -127,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.target.textContent = 'O';
             xORo = "X";
         }
+        event.target.isChanged = true;
         updateTurnBoard();
     }
 

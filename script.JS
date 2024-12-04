@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(intervels);
                 removeOXeventListener();
                 if(xORo === 'X') {
-                    alert("O", "Won the match");
+                    alert("O Won the match");
                 }
                 else {
-                    alert("X", "Won the match");
+                    alert("X Won the match");
                 }
             }
             if(Draw()) {

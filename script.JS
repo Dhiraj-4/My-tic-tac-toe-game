@@ -46,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 else {
                     alert("X Won the match");
                 }
-            }
-            if(Draw()) {
+            }else if(Draw()) {
                 clearInterval(intervels);
                 removeOXeventListener();
                 alert('The Game was a Draw');
